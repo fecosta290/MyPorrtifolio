@@ -13,7 +13,7 @@
     --sideBgColor: #040b14;
     --themeColor: #f6e368;
     --iconBgColor: #2C2F3F;
-    --textColor: #525252;
+    --textColor: #353535;
     --bgColor: #F7F7F7;
 }
 
@@ -259,11 +259,11 @@ main{
     background-color: var(--themeColor);
     border-radius: 3px;
 }
-#sobre .divider ~ p{
+.sub-para{
     color: var(--textColor);
     font-size: 15px;
     letter-spacing: 0.4px;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 15px;
 }
 #sobre .sobre-col{
@@ -372,5 +372,49 @@ main{
 @media only screen and (max-width: 400px){
     #sobre .sobre-col .img-sobre img{
         width: 100%;
+    }
+}
+
+#sobre .fatos-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+#sobre .fatos-content .fatos-box i{
+    color: var(--themeColor);
+    font-size: 40px;
+}
+#sobre .fatos-content .fatos-box strong{
+    color: var(--sideBgColor);
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+#sobre .fatos-content .fatos-box p{
+    color: var(--textColor);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 700px){
+    #sobre .fatos-content{    
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 370px){
+    #sobre .fatos-content .fatos-box i{
+        font-size: 30px;
+    }
+    #sobre .fatos-content .fatos-box strong{
+        font-size: 20px;
+    }
+    
+    #sobre .fatos-content .fatos-box p{
+        font-size: 14px;
     }
 }
